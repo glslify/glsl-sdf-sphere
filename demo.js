@@ -6,7 +6,7 @@ var Shader   = require('gl-shader')
 var glslify  = require('glslify')
 
 var start = Date.now()
-var fitter = fit(canvas, window, 0.25)
+var fitter = fit(canvas, window, window.innerWidth > 600 ? 0.25 : 1)
 
 window.addEventListener('resize', function(e) {
   fitter.scale = window.innerWidth > 600 ? 0.25 : 1
